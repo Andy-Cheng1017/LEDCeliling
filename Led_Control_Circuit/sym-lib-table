@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/libraries/Espressif.kicad_sym")(options "")(descr ""))
+  (lib (name "1CommonUse")(type "KiCad")(uri "${KIPRJMOD}/libraries/1CommonUse.kicad_sym")(options "")(descr "Common Use Conponent intergrated here"))
+)
