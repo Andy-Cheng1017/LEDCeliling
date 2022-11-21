@@ -1,0 +1,17 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.5\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.5\\variants\\esp32s3"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\Firmware\\ArduinoOutput\\sketch\\LEDCeliling.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
