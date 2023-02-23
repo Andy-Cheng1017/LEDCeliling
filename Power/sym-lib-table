@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name "0805")(type "KiCad")(uri "${KIPRJMOD}/Symble/0805/0805.kicad_sym")(options "")(descr ""))
+  (lib (name "DC 5.5mm 2.5mm")(type "KiCad")(uri "${KIPRJMOD}/Symble/DC 5.5mm 2.5mm.kicad_sym")(options "")(descr ""))
+  (lib (name "XL4005E1")(type "KiCad")(uri "${KIPRJMOD}/Symble/XL4005E1.kicad_sym")(options "")(descr ""))
+  (lib (name "CN3761")(type "KiCad")(uri "${KIPRJMOD}/Symble/CN3761.kicad_sym")(options "")(descr ""))
+  (lib (name "XL6019E1")(type "KiCad")(uri "${KIPRJMOD}/Symble/XL6019E1.kicad_sym")(options "")(descr ""))
+  (lib (name "CN3765")(type "KiCad")(uri "${KIPRJMOD}/Symble/CN3765.kicad_sym")(options "")(descr ""))
+  (lib (name "FP6188")(type "KiCad")(uri "${KIPRJMOD}/Symble/FP6188.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# XL6019E1
+#
+DEF XL6019E1 U 0 40 Y Y 1 F N
+F0 "U" 0 700 50 H V C CNN
+F1 "XL6019E1" 0 900 50 H V C CNN
+F2 "Kicad-Lib:TO-263-5_L10.2-W9.9-P1.70-LS14.4-TL" 0 500 50 H I C CNN
+F3 "http://www.szlcsc.com/product/details_74131.html" 0 300 50 H I C CNN
+F4 "C73018" 0 100 50 H I C CNN "SuppliersPartNumber"
+F5 "std:c274f76d31744e6fa735ede6c57835d7" 0 100 50 H I C CNN "uuid"
+DRAW
+X GND 1 450 -400 200 L 50 50 1 1 I 
+X EN 2 450 -200 200 L 50 50 1 1 I 
+X SW 3 -450 100 200 R 50 50 1 1 I 
+X VIN 4 450 200 200 L 50 50 1 1 I 
+X FB 5 450 400 200 L 50 50 1 1 I 
+S -250 600 250 -600 1 1 6 N
+X SW 6 -450 -100 200 R 50 50 1 1 I 
+ENDDRAW
+ENDDEF
+
+#
+#End Library
