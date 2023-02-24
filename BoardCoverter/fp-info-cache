@@ -1,74 +1,4 @@
-20401710959394861
-1component
-Battery
-
-
-0
-2
-2
-1component
-DC-IN-TH_KH-DC-044D-2.0STM
-
-
-0
-3
-3
-1component
-GndConnect
-
-
-0
-1
-1
-1component
-IND-SMD_L7.5-W6.6
-
-
-0
-2
-2
-1component
-IND-SMD_L11.6-W10.1
-
-
-0
-2
-2
-1component
-Potentiometer_Bourns_TC33X_Vertical
-Potentiometer, Bourns, TC33X, Vertical, https://www.bourns.com/pdfs/TC33.pdf
-Potentiometer Bourns TC33X Vertical
-0
-3
-3
-1component
-R_2512_6332Metric
-Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-resistor
-0
-4
-4
-1component
-SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.71x3.4mm_ThermalVias
-SOIC, 8 Pin (http://www.ti.com/lit/ds/symlink/lm5017.pdf#page=31), generated with kicad-footprint-generator ipc_gullwing_generator.py
-SOIC SO
-0
-23
-9
-1component
-SOIC-10_L4.9-W3.9-P1.00-LS6.0-BL
-
-
-0
-10
-10
-1component
-VH3.96 4P SMT
-
-
-0
-4
-4
+20386619733306214
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -86092,3 +86022,10 @@ varistor SIOV
 0
 2
 2
+img
+Hockey
+
+
+0
+0
+0
