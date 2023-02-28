@@ -490,7 +490,7 @@
     (uuid 50a07654-ad9a-4b65-8721-d7fba80ecbea)
     (property "Reference" "J?" (id 0) (at 35.56 19.05 0))
     (property "Value" "USB_C_Receptacle_USB2.0" (id 1) (at 35.56 21.59 0))
-    (property "Footprint" "" (id 2) (at 39.37 41.91 0)
+    (property "Footprint" "1Use:USB_C_Receptacle_HRO_TYPE-C-31-M-12" (id 2) (at 39.37 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (id 3) (at 39.37 41.91 0)
@@ -521,7 +521,7 @@
 
   (symbol_instances
     (path "/50a07654-ad9a-4b65-8721-d7fba80ecbea"
-      (reference "J?") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "")
+      (reference "J?") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "1Use:USB_C_Receptacle_HRO_TYPE-C-31-M-12")
     )
     (path "/214a9b78-19cc-43c0-9584-e9945c2cdbc4"
       (reference "U?") (unit 1) (value "ESP32-S3-WROOM-1") (footprint "Espressif:ESP32-S3-WROOM-1U")
