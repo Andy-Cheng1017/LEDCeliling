@@ -1266,119 +1266,6 @@
         )
       )
     )
-    (symbol "LED:WS2812B" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (id 0) (at 5.08 5.715 0)
-        (effects (font (size 1.27 1.27)) (justify right bottom))
-      )
-      (property "Value" "WS2812B" (id 1) (at 1.27 -5.715 0)
-        (effects (font (size 1.27 1.27)) (justify left top))
-      )
-      (property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" (id 2) (at 1.27 -7.62 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" (id 3) (at 2.54 -9.525 0)
-        (effects (font (size 1.27 1.27)) (justify left top) hide)
-      )
-      (property "ki_keywords" "RGB LED NeoPixel addressable" (id 4) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "RGB LED with integrated controller" (id 5) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*" (id 6) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "WS2812B_0_0"
-        (text "RGB" (at 2.286 -4.191 0)
-          (effects (font (size 0.762 0.762)))
-        )
-      )
-      (symbol "WS2812B_0_1"
-        (polyline
-          (pts
-            (xy 1.27 -3.556)
-            (xy 1.778 -3.556)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 -2.54)
-            (xy 1.778 -2.54)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 4.699 -3.556)
-            (xy 2.667 -3.556)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.286 -2.54)
-            (xy 1.27 -3.556)
-            (xy 1.27 -3.048)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.286 -1.524)
-            (xy 1.27 -2.54)
-            (xy 1.27 -2.032)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 3.683 -1.016)
-            (xy 3.683 -3.556)
-            (xy 3.683 -4.064)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 4.699 -1.524)
-            (xy 2.667 -1.524)
-            (xy 3.683 -3.556)
-            (xy 4.699 -1.524)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (rectangle (start 5.08 5.08) (end -5.08 -5.08)
-          (stroke (width 0.254) (type default) (color 0 0 0 0))
-          (fill (type background))
-        )
-      )
-      (symbol "WS2812B_1_1"
-        (pin power_in line (at 0 7.62 270) (length 2.54)
-          (name "VDD" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 7.62 0 180) (length 2.54)
-          (name "DOUT" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 -7.62 90) (length 2.54)
-          (name "VSS" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -7.62 0 0) (length 2.54)
-          (name "DIN" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "Regulator_Linear:AMS1117" (pin_names (offset 0.762)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (id 0) (at -3.81 3.175 0)
         (effects (font (size 1.27 1.27)))
@@ -2290,6 +2177,10 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 00780d39-d9fc-4891-9b05-a2e51b9ec074)
   )
+  (wire (pts (xy 247.65 128.27) (xy 247.65 132.08))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid 06f9889c-e180-40b2-9e67-80652f46b695)
+  )
   (wire (pts (xy 142.24 43.18) (xy 142.24 45.72))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 08fae221-7b6f-4c57-be73-6210c6206091)
@@ -2914,6 +2805,10 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid f3dda605-2755-41d0-8ddb-1aec5d30fd5f)
   )
+  (wire (pts (xy 247.65 97.79) (xy 247.65 100.33))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid f4dd42b5-4a01-4941-9866-e8a07877fb00)
+  )
   (wire (pts (xy 260.35 53.34) (xy 260.35 55.88))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid f4e65bd4-41ca-4177-b982-3055b22709b7)
@@ -2979,7 +2874,7 @@
   (symbol (lib_id "power:+1V2") (at 260.35 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 043ef9d0-789c-4977-97a1-6ddc0dcf78df)
-    (property "Reference" "#PWR019" (id 0) (at 260.35 27.94 0)
+    (property "Reference" "#PWR021" (id 0) (at 260.35 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+1V2" (id 1) (at 260.35 19.05 0))
@@ -3024,19 +2919,15 @@
     (pin "3" (uuid 6e6c1098-3a26-43e8-9c2d-76d3e4f6cf94))
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x24") (at 238.76 123.19 0) (unit 1)
+  (symbol (lib_id "Connector_Generic:Conn_01x24") (at 105.41 168.91 90) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 0ab82d5b-667c-4b76-a4ab-0c4e65ee3582)
-    (property "Reference" "J2" (id 0) (at 241.3 123.1899 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "Conn_01x24" (id 1) (at 241.3 125.7299 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "1Use:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal" (id 2) (at 238.76 123.19 0)
+    (property "Reference" "J2" (id 0) (at 106.68 162.56 90))
+    (property "Value" "Conn_01x24" (id 1) (at 106.68 165.1 90))
+    (property "Footprint" "1Use:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal" (id 2) (at 105.41 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (id 3) (at 238.76 123.19 0)
+    (property "Datasheet" "~" (id 3) (at 105.41 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b6d9454f-94ed-431e-abae-17ce0c81b247))
@@ -3444,6 +3335,22 @@
     (pin "2" (uuid 5c55c653-303a-4aa1-b520-46d1ee447caa))
   )
 
+  (symbol (lib_id "power:GND") (at 247.65 132.08 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 5e62e175-a477-420f-b85d-57c3ab401a42)
+    (property "Reference" "#PWR020" (id 0) (at 247.65 138.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (id 1) (at 247.65 137.16 0))
+    (property "Footprint" "" (id 2) (at 247.65 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 247.65 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f0c8cd11-cfee-4f06-964c-28cc0e245680))
+  )
+
   (symbol (lib_id "power:GND") (at 189.23 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 65bcb393-5467-401d-a420-a1ccbd54d7de)
@@ -3847,7 +3754,7 @@
   (symbol (lib_id "power:+2V8") (at 260.35 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c3445523-c911-4f71-bb4e-3f7e494ebf2a)
-    (property "Reference" "#PWR020" (id 0) (at 260.35 57.15 0)
+    (property "Reference" "#PWR022" (id 0) (at 260.35 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+2V8" (id 1) (at 260.35 48.26 0))
@@ -3896,6 +3803,22 @@
     )
     (pin "1" (uuid 3eee2221-7af9-4d6a-ba79-a48c3fd1ac35))
     (pin "2" (uuid 44c331f8-33e4-4ba1-bb1e-3071cc175bfd))
+  )
+
+  (symbol (lib_id "power:+5V") (at 247.65 97.79 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid d2c22cc6-601a-4e12-b169-79ca6780c64f)
+    (property "Reference" "#PWR019" (id 0) (at 247.65 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (id 1) (at 248.031 93.3958 0))
+    (property "Footprint" "" (id 2) (at 247.65 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 247.65 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7c633187-5b7f-46d6-83ef-767ac3f4c2ee))
   )
 
   (symbol (lib_id "1CommonUse:C0805") (at 41.91 157.48 0) (unit 1)
@@ -4119,23 +4042,6 @@
     (pin "2" (uuid b3bece26-e54a-4648-8273-e6ed4dc56733))
   )
 
-  (symbol (lib_id "LED:WS2812B") (at 205.74 96.52 0) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
-    (uuid f700c840-ed38-43e3-9294-6d68cf1862ce)
-    (property "Reference" "D2" (id 0) (at 217.17 92.1893 0))
-    (property "Value" "WS2812B" (id 1) (at 217.17 94.7293 0))
-    (property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" (id 2) (at 207.01 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" (id 3) (at 208.28 106.045 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (pin "1" (uuid 02508b5e-d92a-4861-b85e-967c408ceaac))
-    (pin "2" (uuid 136e89e5-38bc-4e97-a73f-c546ec3fb474))
-    (pin "3" (uuid 71fb3a33-b77e-411b-879b-1730aabaf2c1))
-    (pin "4" (uuid d833ba25-2750-4aff-b645-476793b57f2b))
-  )
-
   (symbol (lib_id "power:GND") (at 241.3 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid f7bd06b1-a59a-4911-adc0-15de3023332c)
@@ -4152,8 +4058,33 @@
     (pin "1" (uuid 08ba2715-7c90-44c0-9ce6-9ed7ea947645))
   )
 
+  (sheet (at 222.25 100.33) (size 52.07 27.94) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid c5b80fb8-fc43-4349-a43a-1b76ad6d1037)
+    (property "Sheet name" "WS2812" (id 0) (at 222.25 99.6184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "WS2812.kicad_sch" (id 1) (at 222.25 128.8546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (pin "5V" input (at 247.65 100.33 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 1525817d-4fe7-4ba5-b566-0af5a41bc1a7)
+    )
+    (pin "GND" input (at 247.65 128.27 270)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid b62eaeac-40ac-42da-a1c8-acaba05ad296)
+    )
+    (pin "DIN" input (at 222.25 114.3 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid e1d3476d-ce0c-424b-9871-db5289400a74)
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037" (page "2"))
   )
 
   (symbol_instances
@@ -4223,11 +4154,143 @@
     (path "/f7bd06b1-a59a-4911-adc0-15de3023332c"
       (reference "#PWR018") (unit 1) (value "GND") (footprint "")
     )
+    (path "/d2c22cc6-601a-4e12-b169-79ca6780c64f"
+      (reference "#PWR019") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/5e62e175-a477-420f-b85d-57c3ab401a42"
+      (reference "#PWR020") (unit 1) (value "GND") (footprint "")
+    )
     (path "/043ef9d0-789c-4977-97a1-6ddc0dcf78df"
-      (reference "#PWR019") (unit 1) (value "+1V2") (footprint "")
+      (reference "#PWR021") (unit 1) (value "+1V2") (footprint "")
     )
     (path "/c3445523-c911-4f71-bb4e-3f7e494ebf2a"
-      (reference "#PWR020") (unit 1) (value "+2V8") (footprint "")
+      (reference "#PWR022") (unit 1) (value "+2V8") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/480d2016-354e-48aa-a248-101bbc6261a4"
+      (reference "#PWR023") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/b8bba41d-1d8f-47bb-a31d-2e913270e0e3"
+      (reference "#PWR024") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/572014cb-8c4a-404d-ac50-567f1e237d8d"
+      (reference "#PWR025") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/010814b7-7254-4f51-8b65-8b53ac657ec5"
+      (reference "#PWR026") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/492b4f0c-d1e3-4987-b0dc-2fcce97e41c5"
+      (reference "#PWR027") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/4e19b084-8a06-42d1-b416-a1c610db94dc"
+      (reference "#PWR028") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/671ec6dc-9e25-47f0-8d33-59538c8e3f16"
+      (reference "#PWR029") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/2fc13d11-053a-40b2-9fd9-c0958cae07b9"
+      (reference "#PWR030") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/9e50e5ab-3c37-43b6-9281-39594b3c548b"
+      (reference "#PWR031") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/02a0416c-8d5e-4115-9a14-0464110da89c"
+      (reference "#PWR032") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/f73eb6b9-78b9-4469-ad1a-b6672ea3810a"
+      (reference "#PWR033") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/2de862e4-b04d-46ce-9b70-5bd457a2e164"
+      (reference "#PWR034") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/90454a52-1fd5-47b4-8064-16893afee974"
+      (reference "#PWR035") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/3c7b7628-dc10-4658-9005-09dbbef98262"
+      (reference "#PWR036") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/17a536b5-2542-4e84-a68c-468c07dce3c3"
+      (reference "#PWR037") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/15f87697-0a80-4388-bb6a-bfb2fc5f1c08"
+      (reference "#PWR038") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/ac5365b5-fbca-475c-b000-d608e5162ad6"
+      (reference "#PWR039") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/7cebf345-36ff-42ff-900e-b65862f64b73"
+      (reference "#PWR040") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/2a500180-2799-4673-bea7-f891ece15a7a"
+      (reference "#PWR041") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/a7c2deb4-2b7b-480f-ad16-b04dde9ca6d6"
+      (reference "#PWR042") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/240ef12d-5727-43f1-8ff0-84f44af2df0d"
+      (reference "#PWR043") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/ee9248ee-b382-4dfd-97fe-fd6ed5de3832"
+      (reference "#PWR044") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/57c22529-c5c0-4b88-8f15-b0984641da17"
+      (reference "#PWR045") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/a406d21d-ddb3-4fc7-b33f-9029353b685b"
+      (reference "#PWR046") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/4514b745-bed3-4133-a41c-d5dad3a47fd7"
+      (reference "#PWR047") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/b673135b-8d70-42cc-9145-9b2cf1a825cc"
+      (reference "#PWR048") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/53755cd1-b230-45c3-bed3-53f04d3e61e2"
+      (reference "#PWR049") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/11db2f25-76bb-4497-aaa0-990b91f53255"
+      (reference "#PWR050") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/0e5962db-9976-4205-837f-1c01635813fd"
+      (reference "#PWR051") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/14ae1c6b-3bf8-4ef1-8861-591ec1cdd087"
+      (reference "#PWR052") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/22847962-4aee-4e52-a034-366cd731306c"
+      (reference "#PWR053") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/df98a1e7-5964-4e42-9023-606afcf7e6c1"
+      (reference "#PWR054") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/b14a9258-5ce9-4190-a0a1-6c4c8bc906d1"
+      (reference "#PWR055") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/b439049b-58d9-4224-b9cd-d413b2487979"
+      (reference "#PWR056") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/d0c9284b-ac23-4978-8ec1-4b9105f3a1a3"
+      (reference "#PWR057") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/84d8e736-c8a7-4c93-89cd-9c1f8144a2bc"
+      (reference "#PWR058") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/b05d70e3-fb80-4190-9c99-7e43c3dbc11d"
+      (reference "#PWR059") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/fe10ef82-1c88-458a-b2eb-e333378822bf"
+      (reference "#PWR060") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/0e9590d3-0dce-491f-b129-108042b21d9d"
+      (reference "#PWR061") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/df89d9c2-f2df-495a-ae37-111afb55ff46"
+      (reference "#PWR062") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/f092277a-8e2a-45f9-87b0-bddf274f6e69"
+      (reference "#PWR063") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/cf38e272-dff8-4095-8dcd-e71c4f828b1f"
+      (reference "#PWR064") (unit 1) (value "GND") (footprint "")
     )
     (path "/570ee06f-38f1-44a9-ae2b-f08cf56305e0"
       (reference "BT1") (unit 1) (value "Battery_Cell") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
@@ -4280,8 +4343,65 @@
     (path "/a97d9593-88f3-490c-93d3-a1f528046ef8"
       (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_0805_2012Metric")
     )
-    (path "/f700c840-ed38-43e3-9294-6d68cf1862ce"
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/bb42c9d1-6205-4a15-9e2b-093460c98023"
       (reference "D2") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/58e1f034-d9b4-447f-8d41-b377572fae83"
+      (reference "D3") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/01ee4330-c9fa-43c6-b449-d1972e9dfaec"
+      (reference "D4") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/49415054-d373-4bf5-a4db-6c8d65272c77"
+      (reference "D5") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/cad9cb2b-c57d-455c-a871-b94b1e4be22c"
+      (reference "D6") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/d990abbb-b4d8-425d-8ebc-6ca7948f60ce"
+      (reference "D7") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/9350282b-1430-40c6-ab8e-5edeae1b24f1"
+      (reference "D8") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/bd7d1550-12f2-4e61-8301-dc127a990905"
+      (reference "D9") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/f139bccd-b091-4a22-8930-81ada92ebb5f"
+      (reference "D10") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/7795e6a8-8266-4c47-a72f-fc0f44cf000c"
+      (reference "D11") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/afa3d850-fa16-4942-8aea-1d83d4dc84c0"
+      (reference "D12") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/c415e895-ee1e-41cb-9085-f2d24732b2a4"
+      (reference "D13") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/af87a611-f950-4520-becc-e8b363236096"
+      (reference "D14") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/027fc354-9070-4d52-aa3f-b5d580753cb3"
+      (reference "D15") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/0d6bb25b-4a5f-4568-bdca-680178114682"
+      (reference "D16") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/97e6f81e-2627-47c9-aed2-49cd786bcafc"
+      (reference "D17") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/05523e09-535d-48cf-917e-431e0c800150"
+      (reference "D18") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/c3386113-61e3-4bfc-9199-e5270d059801"
+      (reference "D19") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/9be50038-f91a-44d0-988d-0418c31535e5"
+      (reference "D20") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+    )
+    (path "/c5b80fb8-fc43-4349-a43a-1b76ad6d1037/72f91085-fad6-43aa-a852-86cf5bb47021"
+      (reference "D21") (unit 1) (value "WS2812B") (footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
     )
     (path "/50a07654-ad9a-4b65-8721-d7fba80ecbea"
       (reference "J1") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "1Use:USB_C_Receptacle_HRO_TYPE-C-31-M-12")
