@@ -3,4 +3,5 @@
   (lib (name "1CommonUse")(type "KiCad")(uri "${KIPRJMOD}/Symble/1CommonUse.kicad_sym")(options "")(descr ""))
   (lib (name "ip5306")(type "KiCad")(uri "${KIPRJMOD}/Symble/ip5306.kicad_sym")(options "")(descr ""))
   (lib (name "gc9a01_ips_display_spi")(type "KiCad")(uri "${KIPRJMOD}/Symble/gc9a01_ips_display_spi.kicad_sym")(options "")(descr ""))
+  (lib (name "0805")(type "KiCad")(uri "${KIPRJMOD}/Symble/0805.kicad_sym")(options "")(descr ""))
 )

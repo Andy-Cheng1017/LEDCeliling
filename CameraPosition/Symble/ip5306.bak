@@ -47,7 +47,7 @@
         (name "SW" (effects (font (size 1.27 1.27))))
         (number "7" (effects (font (size 1.27 1.27))))
       )
-      (pin power_out line (at 10.16 6.35 180) (length 2.54)
+      (pin bidirectional line (at 10.16 6.35 180) (length 2.54)
         (name "VOUT" (effects (font (size 1.27 1.27))))
         (number "8" (effects (font (size 1.27 1.27))))
       )
