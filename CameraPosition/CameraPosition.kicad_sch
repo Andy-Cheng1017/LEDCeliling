@@ -3983,7 +3983,7 @@
     (in_bom yes) (on_board yes)
     (uuid 5a5b7060-983c-4989-878e-3126720e998d)
     (property "Reference" "L1" (id 0) (at 135.89 28.321 90))
-    (property "Value" "1n" (id 1) (at 135.89 30.6324 90))
+    (property "Value" "1u" (id 1) (at 135.89 30.6324 90))
     (property "Footprint" "Inductor_SMD:L_Wuerth_MAPI-2512" (id 2) (at 135.89 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -5352,7 +5352,7 @@
       (reference "J2") (unit 1) (value "Conn_01x25") (footprint "1Use:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal")
     )
     (path "/5a5b7060-983c-4989-878e-3126720e998d"
-      (reference "L1") (unit 1) (value "1n") (footprint "Inductor_SMD:L_Wuerth_MAPI-2512")
+      (reference "L1") (unit 1) (value "1u") (footprint "Inductor_SMD:L_Wuerth_MAPI-2512")
     )
     (path "/203bddf5-889d-4566-ba36-fe7a8bede16e"
       (reference "Q1") (unit 1) (value "Q_PMOS_GSD") (footprint "Package_TO_SOT_SMD:SOT-23")
