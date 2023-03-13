@@ -377,7 +377,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Power.kicad_pro",
+    "filename": "PowerPanelization.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -411,7 +411,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "PowerPanelization.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
