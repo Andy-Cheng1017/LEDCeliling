@@ -70,7 +70,7 @@ void setup() {
 
     // drawText(0);
 }
-int R = 20;
+int R = 10;
 // uint8_t wheelval = 0;
 void loop() {
     // animate by going through the colour wheel for the first two lines
@@ -83,7 +83,7 @@ void loop() {
         delay(10);
         dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
     }
-    Serial.println("OK");
+    // Serial.println("OK");
     // for (int i = 44; i >= 20; i--) {
     //     dma_display->drawPixelRGB888(i, i, 255, 255, 255);
     //     delay(50);

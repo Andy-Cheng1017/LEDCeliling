@@ -37,12 +37,12 @@
 const char* ssid = "Cheng_Router";
 const char* password = "0928192448";
 
-IPAddress local_IP(192, 168, 50, 40);
-// Set your Gateway IP address
-IPAddress gateway(192, 168, 1, 1);
-IPAddress subnet(255, 255, 0, 0);
-IPAddress primaryDNS(8, 8, 8, 8);    // optional
-IPAddress secondaryDNS(8, 8, 4, 4);  // optional
+// IPAddress local_IP(192, 168, 50, 40);
+// // Set your Gateway IP address
+// IPAddress gateway(192, 168, 1, 1);
+// IPAddress subnet(255, 255, 0, 0);
+// IPAddress primaryDNS(8, 8, 8, 8);    // optional
+// IPAddress secondaryDNS(8, 8, 4, 4);  // optional
 
 void startCameraServer();
 
@@ -131,9 +131,9 @@ void setup() {
 #if defined(CAMERA_MODEL_ESP32S3_EYE)
     s->set_vflip(s, 1);
 #endif
-    if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
-        Serial.println("STA Failed to configure");
-    }
+    // if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+    //     Serial.println("STA Failed to configure");
+    // }
     // WiFi.begin(ssid, password);
     WiFi.begin(ssid, password);
     WiFi.setSleep(false);
