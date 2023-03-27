@@ -1,4 +1,5 @@
 
+
 // Example sketch which shows how to display some patterns
 // on a 64x32 LED matrix
 //
@@ -71,7 +72,7 @@ void setup() {
     // Display Setup
     dma_display = new MatrixPanel_I2S_DMA(mxconfig);
     dma_display->begin();
-    dma_display->setBrightness8(200);  // 0-255
+    dma_display->setBrightness8(50);  // 0-255
     dma_display->clearScreen();
     // USB.begin();
     // dma_display->fillScreen(myWHITE);
@@ -128,10 +129,10 @@ void loop() {
     //   dma_display->fillScreen(myBLACK);
     delay(2000);
     dma_display->fillScreen(myBLUE);
-    delay(2000);
-    dma_display->fillScreen(myRED);
-    delay(2000);
-    dma_display->fillScreen(myGREEN);
+    // delay(2000);
+    // dma_display->fillScreen(myRED);
+    // delay(2000);
+    // dma_display->fillScreen(myGREEN);
     //   delay(2000);
     //   dma_display->fillScreen(myWHITE);
     //   dma_display->clearScreen();

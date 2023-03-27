@@ -1,12 +1,13 @@
 # 1 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
 
+
 // Example sketch which shows how to display some patterns
 // on a 64x32 LED matrix
 //
-# 6 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
+# 7 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
 
-# 8 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
-# 28 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
+# 9 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
+# 29 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
 // MatrixPanel_I2S_DMA dma_display;
 MatrixPanel_I2S_DMA *dma_display = nullptr;
 
@@ -53,7 +54,7 @@ void setup() {
     // Display Setup
     dma_display = new MatrixPanel_I2S_DMA(mxconfig);
     dma_display->begin();
-    dma_display->setBrightness8(200); // 0-255
+    dma_display->setBrightness8(50); // 0-255
     dma_display->clearScreen();
     // USB.begin();
     // dma_display->fillScreen(myWHITE);
@@ -110,10 +111,10 @@ void loop() {
     //   dma_display->fillScreen(myBLACK);
     delay(2000);
     dma_display->fillScreen(myBLUE);
-    delay(2000);
-    dma_display->fillScreen(myRED);
-    delay(2000);
-    dma_display->fillScreen(myGREEN);
+    // delay(2000);
+    // dma_display->fillScreen(myRED);
+    // delay(2000);
+    // dma_display->fillScreen(myGREEN);
     //   delay(2000);
     //   dma_display->fillScreen(myWHITE);
     //   dma_display->clearScreen();
