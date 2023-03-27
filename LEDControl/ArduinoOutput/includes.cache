@@ -1,0 +1,107 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32s3"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\LEDControl\\ArduinoOutput\\sketch\\LEDControl.ino.cpp",
+    "Include": "ESP32-HUB75-MatrixPanel-I2S-DMA.h",
+    "Includepath": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\ESP32_HUB75_LED_MATRIX_PANEL_DMA_Display\\src"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\LEDControl\\ArduinoOutput\\sketch\\LEDControl.ino.cpp",
+    "Include": "Adafruit_GFX.h",
+    "Includepath": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\LEDControl\\ArduinoOutput\\sketch\\LEDControl.ino.cpp",
+    "Include": "Adafruit_I2CDevice.h",
+    "Includepath": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_BusIO"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\LEDControl\\ArduinoOutput\\sketch\\LEDControl.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\LEDControl\\ArduinoOutput\\sketch\\LEDControl.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\LEDControl\\ArduinoOutput\\sketch\\LEDControl.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\ESP32_HUB75_LED_MATRIX_PANEL_DMA_Display\\src\\ESP32-HUB75-MatrixPanel-I2S-DMA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\ESP32_HUB75_LED_MATRIX_PANEL_DMA_Display\\src\\ESP32-HUB75-MatrixPanel-leddrivers.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\ESP32_HUB75_LED_MATRIX_PANEL_DMA_Display\\src\\platforms\\esp32\\esp32_i2s_parallel_dma.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\ESP32_HUB75_LED_MATRIX_PANEL_DMA_Display\\src\\platforms\\esp32s3\\gdma_lcd_parallel16.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\Adafruit_GFX.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\Adafruit_GrayOLED.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\Adafruit_SPITFT.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\glcdfont.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_SPIDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

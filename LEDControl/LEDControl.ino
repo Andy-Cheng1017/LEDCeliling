@@ -6,6 +6,21 @@
 
 #include "USB.h"
 
+#define R1_PIN 4
+#define G1_PIN 5
+#define B1_PIN 6
+#define R2_PIN 7
+#define G2_PIN 15
+#define B2_PIN 16
+#define A_PIN 18
+#define B_PIN 8
+#define C_PIN 3
+#define D_PIN 9
+#define E_PIN 17 
+#define CLK_PIN 14
+#define LAT_PIN 21
+#define OE_PIN 47
+
 #define PANEL_RES_X 64  // Number of pixels wide of each INDIVIDUAL panel module.
 #define PANEL_RES_Y 64  // Number of pixels tall of each INDIVIDUAL panel module.
 #define PANEL_CHAIN 1   // Total number of panels chained one to another
@@ -23,13 +38,30 @@ uint16_t myBLUE = dma_display->color565(0, 0, 255);
 
 void setup() {
     // Module configuration
+    HUB75_I2S_CFG::i2s_pins _pins = {
+        R1_PIN,
+        G1_PIN,
+        B1_PIN,
+        R2_PIN,
+        G2_PIN,
+        B2_PIN,
+        A_PIN,
+        B_PIN,
+        C_PIN,
+        D_PIN,
+        E_PIN,
+        LAT_PIN,
+        OE_PIN,
+        CLK_PIN
+    };
     HUB75_I2S_CFG mxconfig(
         PANEL_RES_X,  // module width
         PANEL_RES_Y,  // module height
-        PANEL_CHAIN   // Chain length
+        PANEL_CHAIN,   // Chain length
+        _pins
     );
 
-    Serial.begin();
+    Serial.begin(115200);
     // USB.begin();
     // Serial1.setDebugOutput(true);
     // mxconfig.gpio.e = 18;
@@ -70,7 +102,7 @@ void setup() {
 
     // drawText(0);
 }
-int R = 10;
+// int R = 10;
 // uint8_t wheelval = 0;
 void loop() {
     // animate by going through the colour wheel for the first two lines
@@ -78,31 +110,29 @@ void loop() {
     // wheelval +=1;
     // dma_display->fillCircle(40, 21, 10, dma_display->color444(15, 0, 15));
     // while (1)
-    for (int i = 0; i <= 360; i += 5) {
-        dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 255, 255, 255);
-        delay(10);
-        dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
-    }
-    // Serial.println("OK");
+    // for (int i = 0; i <= 360; i += 5) {
+    //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 255, 255, 255);
+    //     delay(10);
+    //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
+    // }
+    Serial.println("OK");
     // for (int i = 44; i >= 20; i--) {
     //     dma_display->drawPixelRGB888(i, i, 255, 255, 255);
     //     delay(50);
     //     dma_display->drawPixelRGB888(i, i, 0, 0, 0);
     // }
 
-    /*
-      drawText(0);
-      delay(2000);
-      dma_display->clearScreen();
-      dma_display->fillScreen(myBLACK);
-      delay(2000);
-      dma_display->fillScreen(myBLUE);
-      delay(2000);
-      dma_display->fillScreen(myRED);
-      delay(2000);
-      dma_display->fillScreen(myGREEN);
-      delay(2000);
-      dma_display->fillScreen(myWHITE);
-      dma_display->clearScreen();
-      */
+    //   drawText(0);
+    //   delay(2000);
+    //   dma_display->clearScreen();
+    //   dma_display->fillScreen(myBLACK);
+    delay(2000);
+    dma_display->fillScreen(myBLUE);
+    delay(2000);
+    dma_display->fillScreen(myRED);
+    delay(2000);
+    dma_display->fillScreen(myGREEN);
+    //   delay(2000);
+    //   dma_display->fillScreen(myWHITE);
+    //   dma_display->clearScreen();
 }
