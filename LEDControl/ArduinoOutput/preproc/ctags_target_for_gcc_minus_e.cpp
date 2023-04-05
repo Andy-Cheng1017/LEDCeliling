@@ -35,14 +35,12 @@ void setup() {
         17,
         21,
         47,
-        14
-    };
+        14};
     HUB75_I2S_CFG mxconfig(
         64 /* Number of pixels wide of each INDIVIDUAL panel module.*/, // module width
         64 /* Number of pixels tall of each INDIVIDUAL panel module.*/, // module height
         1 /* Total number of panels chained one to another*/, // Chain length
-        _pins
-    );
+        _pins);
 
     Serial.begin(115200);
     // USB.begin();
@@ -85,20 +83,22 @@ void setup() {
 
     // drawText(0);
 }
-// int R = 10;
+int R = 20;
 // uint8_t wheelval = 0;
 void loop() {
     // animate by going through the colour wheel for the first two lines
     // drawText(wheelval);
     // wheelval +=1;
-    // dma_display->fillCircle(40, 21, 10, dma_display->color444(15, 0, 15));
     // while (1)
-    // for (int i = 0; i <= 360; i += 5) {
-    //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 255, 255, 255);
-    //     delay(10);
-    //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
-    // }
-    Serial.println("OK");
+    for (int i = 0; i <= 360; i += 1) {
+        dma_display->fillCircle(32 + (int)(R * sin(i * 3.1415926535897932384626433832795 / 180)), 32 + (int)(R * cos(i * 3.1415926535897932384626433832795 / 180)), 5, dma_display->color444(10, 10, 10));
+        //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 255, 255, 255);
+        delay(10);
+        dma_display->clearScreen();
+
+        //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
+    }
+    // Serial.println("OK");
     // for (int i = 44; i >= 20; i--) {
     //     dma_display->drawPixelRGB888(i, i, 255, 255, 255);
     //     delay(50);
@@ -109,8 +109,8 @@ void loop() {
     //   delay(2000);
     //   dma_display->clearScreen();
     //   dma_display->fillScreen(myBLACK);
-    delay(2000);
-    dma_display->fillScreen(myBLUE);
+    // delay(2000);
+    // dma_display->fillScreen(myBLUE);
     // delay(2000);
     // dma_display->fillScreen(myRED);
     // delay(2000);
