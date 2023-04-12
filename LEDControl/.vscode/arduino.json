@@ -1,8 +1,8 @@
 {
     "board": "esp32:esp32:esp32s3",
-    "programmer": "esptool",
-    "port": "COM4",
-    "sketch": "LEDControl.ino",
+    "port": "COM32",
     "configuration": "JTAGAdapter=default,PSRAM=opi,FlashMode=qio,FlashSize=8M,LoopCore=1,EventsCore=1,USBMode=hwcdc,CDCOnBoot=cdc,MSCOnBoot=default,DFUOnBoot=default,UploadMode=cdc,PartitionScheme=default_8MB,CPUFreq=240,UploadSpeed=921600,DebugLevel=none,EraseFlash=none",
+    "sketch": "LEDControl.ino",
+    "programmer": "esp32:esptool",
     "output": "ArduinoOutput"
 }

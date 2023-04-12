@@ -1,0 +1,8 @@
+{
+    "sketch": "CameraScript.ino",
+    "output": "ArduinoOutput",
+    "configuration": "JTAGAdapter=default,PSRAM=opi,FlashMode=qio,FlashSize=8M,LoopCore=1,EventsCore=1,USBMode=hwcdc,CDCOnBoot=cdc,MSCOnBoot=default,DFUOnBoot=default,UploadMode=cdc,PartitionScheme=default_8MB,CPUFreq=240,UploadSpeed=921600,DebugLevel=none,EraseFlash=none",
+    "board": "esp32:esp32:esp32s3",
+    "port": "COM29",
+    "programmer": "esp32:esptool"
+}

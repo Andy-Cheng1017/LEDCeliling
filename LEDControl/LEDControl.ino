@@ -4,6 +4,7 @@
 // on a 64x32 LED matrix
 //
 #include <ESP32-HUB75-MatrixPanel-I2S-DMA.h>
+#include <ESP32-VirtualMatrixPanel-I2S-DMA.h>
 
 #include "USB.h"
 
@@ -24,7 +25,11 @@
 
 #define PANEL_RES_X 64  // Number of pixels wide of each INDIVIDUAL panel module.
 #define PANEL_RES_Y 64  // Number of pixels tall of each INDIVIDUAL panel module.
-#define PANEL_CHAIN 1   // Total number of panels chained one to another
+#define PANEL_CHAIN 3   // Total number of panels chained one to another
+#define PANE_WIDTH PANEL_WIDTH *PANELS_NUMBER
+#define PANE_HEIGHT PANEL_HEIGHT
+
+#define PIXEL_COLOR_DEPTH_BITS 1
 
 // MatrixPanel_I2S_DMA dma_display;
 MatrixPanel_I2S_DMA *dma_display = nullptr;
@@ -58,7 +63,10 @@ void setup() {
         PANEL_RES_X,  // module width
         PANEL_RES_Y,  // module height
         PANEL_CHAIN,  // Chain length
-        _pins);
+        _pins,
+        HUB75_I2S_CFG::FM6124,
+        HUB75_I2S_CFG::HZ_20M,
+        );
 
     Serial.begin(115200);
     // USB.begin();
@@ -70,7 +78,7 @@ void setup() {
     // Display Setup
     dma_display = new MatrixPanel_I2S_DMA(mxconfig);
     dma_display->begin();
-    dma_display->setBrightness8(50);  // 0-255
+    dma_display->setBrightness8(255);  // 0-255
     dma_display->clearScreen();
     // USB.begin();
     // dma_display->fillScreen(myWHITE);
@@ -102,20 +110,44 @@ void setup() {
     // drawText(0);
 }
 int R = 20;
+long t = 0;
 // uint8_t wheelval = 0;
 void loop() {
     // animate by going through the colour wheel for the first two lines
     // drawText(wheelval);
     // wheelval +=1;
     // while (1)
-    for (int i = 0; i <= 360; i += 1) {
-        dma_display->fillCircle(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 5, dma_display->color444(15, 15, 15));
-        //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 255, 255, 255);
+    // t = micros();
+    // dma_display->fillCircle(32, 32, 10, dma_display->color444(15, 15, 15));
+    // Serial.println(micros() - t);
+    for (int i = 0; i <= 128; i++) {
+        t = micros();
+        Serial.print("fillCircle: ");
+        dma_display->fillCircle(32 + i, 32, 10, dma_display->color444(15, 15, 15));
+        Serial.println(micros() - t);
+        t = micros();
+        Serial.print("delay: ");
         delay(10);
+        Serial.println(micros() - t);
+        t = micros();
+        Serial.print("clearScreen: ");
         dma_display->clearScreen();
-
-        //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
+        Serial.println(micros() - t);
     }
+    // for (int i = 0; i <= 128; i++) {
+    //     dma_display->fillCircle(160 - i, 32, 10, dma_display->color444(15, 15, 15));
+    //     delay(10);
+    //     dma_display->clearScreen();
+    // }
+    // Serial.println(millis() - t);
+    // for (int i = 0; i <= 360; i += 1) {
+    //     dma_display->fillCircle(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 5, dma_display->color444(15, 15, 15));
+    //     //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 255, 255, 255);
+    //     delay(10);
+    //     dma_display->clearScreen();
+
+    //     //     dma_display->drawPixelRGB888(32 + (int)(R * sin(i * PI / 180)), 32 + (int)(R * cos(i * PI / 180)), 0, 0, 0);
+    // }
     // Serial.println("OK");
     // for (int i = 44; i >= 20; i--) {
     //     dma_display->drawPixelRGB888(i, i, 255, 255, 255);
@@ -129,11 +161,11 @@ void loop() {
     //   dma_display->fillScreen(myBLACK);
     // delay(2000);
     // dma_display->fillScreen(myBLUE);
-    // delay(2000);
+    // delay(1000);
     // dma_display->fillScreen(myRED);
-    // delay(2000);
+    // delay(1000);
     // dma_display->fillScreen(myGREEN);
-    //   delay(2000);
+    //   delay(1000);
     //   dma_display->fillScreen(myWHITE);
     //   dma_display->clearScreen();
 }

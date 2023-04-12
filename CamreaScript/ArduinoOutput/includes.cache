@@ -1,0 +1,72 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32s3"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\CamreaScript\\ArduinoOutput\\sketch\\CameraScript.ino.cpp",
+    "Include": "WiFi.h",
+    "Includepath": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src"
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\CamreaScript\\ArduinoOutput\\sketch\\CameraScript.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "d:\\work\\LEDCeliling\\CamreaScript\\ArduinoOutput\\sketch\\app_httpd.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFi.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiAP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiClient.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiScan.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\swps9\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
