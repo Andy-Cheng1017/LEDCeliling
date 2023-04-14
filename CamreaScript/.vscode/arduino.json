@@ -5,4 +5,5 @@
     "board": "esp32:esp32:esp32s3",
     "port": "COM6",
     "programmer": "esp32:esptool"
+    
 }
