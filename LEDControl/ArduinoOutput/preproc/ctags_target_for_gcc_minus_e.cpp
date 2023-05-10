@@ -1,93 +1,119 @@
 # 1 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
 
+# 3 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
+# 4 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
+# 5 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
 
-// Example sketch which shows how to display some patterns
-// on a 64x32 LED matrix
-//
-# 7 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
-# 8 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
 
-# 10 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 2
-# 34 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
+
+
+
+Scheduler userScheduler; // to control your personal task
+painlessMesh mesh;
+
+// Define the pins used by the LED matrix
+# 33 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
+// #define VIRTUAL_MATRIX_CHAIN_TYPE CHAIN_BOTTOM_LEFT_UP
+
+
+
 // MatrixPanel_I2S_DMA dma_display;
 MatrixPanel_I2S_DMA *dma_display = nullptr;
-
+int Pos[2];
+// This is the color palette for the display
 uint16_t myBLACK = dma_display->color565(0, 0, 0);
 uint16_t myWHITE = dma_display->color565(255, 255, 255);
 uint16_t myRED = dma_display->color565(255, 0, 0);
 uint16_t myGREEN = dma_display->color565(0, 255, 0);
 uint16_t myBLUE = dma_display->color565(0, 0, 255);
+unsigned long lastTime = 0;
+void receivedCallback(uint32_t from, String &msg) {
+    Serial.println(millis() - lastTime);
+    lastTime = millis();
+    char msgChar[msg.length() + 1];
+    msg.toCharArray(msgChar, msg.length() + 1);
+    char *token = strtok(msgChar, ",");
+    Pos[2];
+    int i = 0;
+    while (token != 
+# 55 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 3 4
+                   __null
+# 55 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
+                       ) {
+        Pos[i] = atoi(token);
+        i++;
+        token = strtok(
+# 58 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino" 3 4
+                      __null
+# 58 "d:\\work\\LEDCeliling\\LEDControl\\LEDControl.ino"
+                          , ",");
+    }
+    Serial.printf("X: %d Y: %d\n", Pos[0], Pos[1]);
+}
 
-// USBCDC Serial;
+void newConnectionCallback(uint32_t nodeId) {
+    Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
+}
+
+void changedConnectionCallback() {
+    Serial.printf("Changed connections\n");
+}
+
+void nodeTimeAdjustedCallback(int32_t offset) {
+    Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(), offset);
+}
 
 void setup() {
-    // Module configuration
     HUB75_I2S_CFG::i2s_pins _pins = {
-        4,
-        5,
-        6,
-        7,
-        15,
-        16,
-        18,
-        8,
-        3,
-        9,
-        17,
-        21,
-        47,
-        14};
+        4 /* Red 1*/,
+        5 /* Green 1*/,
+        6 /* Blue 1*/,
+        7 /* Red 2*/,
+        15 /* Green 2*/,
+        16 /* Blue 2*/,
+        18 /* Address 1*/,
+        8 /* Address 2*/,
+        3 /* Address 3*/,
+        9 /* Address 4*/,
+        17 /* Address 5*/,
+        21 /* Latch*/,
+        47 /* Output Enable*/,
+        14 /* Clock*/,
+    };
     HUB75_I2S_CFG mxconfig(
         64 /* Number of pixels wide of each INDIVIDUAL panel module.*/, // module width
         64 /* Number of pixels tall of each INDIVIDUAL panel module.*/, // module height
         3 /* Total number of panels chained one to another*/, // Chain length
-        _pins);
-
+        _pins
+        // HUB75_I2S_CFG::FM6124,
+        // HUB75_I2S_CFG::HZ_20M
+    );
+    mesh.onNewConnection(&newConnectionCallback);
+    mesh.onChangedConnections(&changedConnectionCallback);
+    mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
     Serial.begin(115200);
-    // USB.begin();
-    // Serial1.setDebugOutput(true);
-    // mxconfig.gpio.e = 18;
-    // mxconfig.clkphase = false;
-    mxconfig.driver = HUB75_I2S_CFG::FM6124;
+
+    // mxconfig.driver = HUB75_I2S_CFG::FM6124;
 
     // Display Setup
     dma_display = new MatrixPanel_I2S_DMA(mxconfig);
     dma_display->begin();
-    dma_display->setBrightness8(255); // 0-255
+    dma_display->setBrightness8(100); // 0-255
     dma_display->clearScreen();
-    // USB.begin();
-    // dma_display->fillScreen(myWHITE);
-
-    // fix the screen with green
-    // dma_display->fillRect(0, 0, dma_display->width(), dma_display->height(), dma_display->color444(0, 15, 0));
-    // delay(500);
-
-    // // draw a box in yellow
-    // dma_display->drawRect(0, 0, dma_display->width(), dma_display->height(), dma_display->color444(15, 15, 0));
-    // delay(500);
-
-    // // draw an 'X' in red
-    // dma_display->drawLine(0, 0, dma_display->width()-1, dma_display->height()-1, dma_display->color444(15, 0, 0));
-    // dma_display->drawLine(dma_display->width()-1, 0, 0, dma_display->height()-1, dma_display->color444(15, 0, 0));
-    // delay(500);
-
-    // // draw a blue circle
-    // dma_display->drawCircle(10, 10, 10, dma_display->color444(0, 0, 15));
-    // delay(500);
-
-    // fill a violet circle
-    // dma_display->drawPixelRGB888(32, 32, 255, 255, 255);
-    // delay(500);
-
-    // fill the screen with 'black'
-    // dma_display->fillScreen(dma_display->color444(0, 0, 0));
-
-    // drawText(0);
+    mesh.init("ChengMesh", "0928192448", &userScheduler, 555);
+    mesh.onReceive(&receivedCallback);
 }
-int R = 20;
+
+// int R = 20;
 long t = 0;
+int i;
 // uint8_t wheelval = 0;
 void loop() {
+    // dma_display->drawPixel(0, 0, dma_display->color444(15, 15, 15));
+    dma_display->clearScreen();
+    dma_display->fillCircle(191 - Pos[1], 64 * (0 + 1) - Pos[0] - 1, 10, dma_display->color444(15, 15, 15));
+    // Serial.print("OK");
+    mesh.update();
     // animate by going through the colour wheel for the first two lines
     // drawText(wheelval);
     // wheelval +=1;
@@ -95,24 +121,32 @@ void loop() {
     // t = micros();
     // dma_display->fillCircle(32, 32, 10, dma_display->color444(15, 15, 15));
     // Serial.println(micros() - t);
-    for (int i = 0; i <= 128; i++) {
-        t = micros();
-        Serial.print("fillCircle: ");
-        dma_display->fillCircle(32 + i, 32, 10, dma_display->color444(15, 15, 15));
-        Serial.println(micros() - t);
-        t = micros();
-        Serial.print("delay: ");
-        delay(10);
-        Serial.println(micros() - t);
-        t = micros();
-        Serial.print("clearScreen: ");
-        dma_display->clearScreen();
-        Serial.println(micros() - t);
-    }
-    // for (int i = 0; i <= 128; i++) {
-    //     dma_display->fillCircle(160 - i, 32, 10, dma_display->color444(15, 15, 15));
-    //     delay(10);
+    // for (int i = 0; i <= 128; i++) {                                                 // 迴圈 1~128
+    //     t = micros();                                                                // 取得當前時間
+    //     Serial.print("fillCircle: ");                                                // 顯示文字
+    //     dma_display->fillCircle(32 + i, 32, 10, dma_display->color444(15, 15, 15));  // 畫圓
+    //     Serial.println(micros() - t);                                                // 顯示時間
+    //     t = micros();                                                                // 取得當前時間
+    //     Serial.print("delay: ");                                                     // 顯示文字
+    //     delay(10);                                                                   // 延遲10ms
+    //     Serial.println(micros() - t);                                                // 顯示時間
+    //     t = micros();                                                                // 取得當前時間
+    //     Serial.print("clearScreen: ");                                               // 顯示文字
+    //     dma_display->clearScreen();                                                  // 清除螢幕
+    //     Serial.println(micros() - t);                                                // 顯示時間
+    // }
+    // if (millis() - t > 10) {
+    //     t = millis();
+    //     i++;
     //     dma_display->clearScreen();
+    //     dma_display->fillCircle(160 - i, 32, 10, dma_display->color444(15, 15, 15));
+    //     if (i >= 128) {
+    //         i = 0;
+    //     }
+    // }
+    // for (int i = 0; i <= 128; i++) {
+
+    // delay(10);
     // }
     // Serial.println(millis() - t);
     // for (int i = 0; i <= 360; i += 1) {
