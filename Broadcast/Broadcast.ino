@@ -1,14 +1,36 @@
-#include "painlessMesh.h"
+#include "namedMesh.h"
+
+#define MESH_NAME "Root"
 #define MESH_PREFIX "ChengMesh"
 #define MESH_PASSWORD "0928192448"
 #define MESH_PORT 555
 
 Scheduler userScheduler;  // to control your personal task
-painlessMesh mesh;
+// painlessMesh mesh;
+namedMesh mesh;
 
-// Needed for painless library
-void receivedCallback(uint32_t from, String &msg) {
-    Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+String nodeName = MESH_NAME;
+
+unsigned int PuckXPosition = 4000;
+unsigned int PuckYPosition = 0;
+
+unsigned int Player1StickXPosition = 1000;
+unsigned int Player1StickYPosition = 0;
+
+unsigned int Player2StickXPosition = 7000;
+unsigned int Player2StickYPosition = 0;
+
+void ReciveCallback(String &from, String &msg) {
+    char msgChar[msg.length() + 1];
+    msg.toCharArray(msgChar, msg.length() + 1);
+    char *token = strtok(msgChar, " ");
+    int Pos[3];
+    int i = 0;
+    while (token != NULL) {
+        Pos[i] = atoi(token);
+        i++;
+        token = strtok(NULL, " ");
+    }
 }
 
 void newConnectionCallback(uint32_t nodeId) {
@@ -27,13 +49,17 @@ void setup() {
     Serial.begin(115200);
 
     // mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
-    mesh.setDebugMsgTypes(ERROR | STARTUP);  // set before init() so that you can see startup messages
-
+    mesh.setDebugMsgTypes(
+        ERROR | STARTUP | CONNECTION |
+        DEBUG);  // set before init() so that you can see startup messages
+    mesh.setRoot(true);
     mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
-    mesh.onReceive(&receivedCallback);
+    mesh.setName(nodeName);
+    mesh.onReceive(&ReciveCallback);
     mesh.onNewConnection(&newConnectionCallback);
     mesh.onChangedConnections(&changedConnectionCallback);
     mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
+    mesh.setContainsRoot(true);
 }
 
 void loop() {
@@ -42,21 +68,23 @@ void loop() {
         Serial.flush();
         char msgChar[msg.length() + 1];
         msg.toCharArray(msgChar, msg.length() + 1);
-        char *token = strtok(msgChar, ",");
+        char *token = strtok(msgChar, " ");
         int Pos[2];
         int i = 0;
         while (token != NULL) {
             Pos[i] = atoi(token);
             i++;
-            token = strtok(NULL, ",");
+            token = strtok(NULL, " ");
         }
         // Serial.printf("startHere Message: %d, %d\n", Pos[0], Pos[1]);
         Pos[0] += 4000;
         Pos[1] += 1500;
-        unsigned int XPosition = map(Pos[0], 0, 8000, 0, 511);
-        unsigned int YPosition = map(Pos[1], 0, 3000, 0, 191);
-        String Cmsg = String(XPosition) + "," + String(YPosition);
-        mesh.sendBroadcast(Cmsg);
+        PuckXPosition = map(Pos[0], 0, 8000, 0, 511);
+        PuckYPosition = map(Pos[1], 0, 3000, 0, 191);
+        String Cmsg = String(PuckXPosition) + " " + String(PuckYPosition);
+        if (!mesh.sendBroadcast(Cmsg)) {
+            Serial.println("Broadcast failed");
+        }
     }
     // char a[] = {'h', 'e', 'l', 'l', 'o', '\0'};
     // Serial.print(a);
